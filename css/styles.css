@@ -1,0 +1,244 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body, html, h1, h2, ul, input {
+  margin: 0;
+  padding: 0;
+}
+  
+  /***** MAIN *****/
+  
+  body {
+    text-align: center;
+    background: url(../img/bg-photo-min.jpg) center;
+    background-size: cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+    font-family: "Cabin Sketch", cursive;
+    color: #fff;
+  }
+  
+  .clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  
+  /***** HEADER *****/
+  
+  h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+    padding: 30px 20px;
+    display: inline-block;
+  }
+  
+  .menu-icon {
+    padding: 20px;
+    font-size: 40px;
+    float: left;
+  }
+  
+  .icon-info {
+    float: left;
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+    padding: 26px 5px;
+  }
+  
+  .tooltiptext {
+      visibility: hidden;
+      color: #111;
+      font-family: "Lato", "sans-serif";
+      font-size: 10px;
+      width: 200px;
+      text-align: left;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      font-style: normal;
+      position: absolute;
+      z-index: 1;
+  }
+  
+  .icon-info:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+  /***** SECTION *****/
+  
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  /* Instructions section */
+  
+  .side {
+    width: 20%;
+    min-width: 230px;
+    font-family: "Lato", "sans-serif";
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  h2 {
+    padding: 20px 10px 10px;
+    font-size: 18px;
+  }
+  
+  h2:first-child {
+    padding-top: 0;
+  }
+  
+  .line {
+    padding: 5px 10px 0;
+  }
+  
+  input,
+  button {
+    font-family: "Lato", "sans-serif";
+  }
+  
+  button {
+    margin: 10px;
+    width: 120px;
+    padding: 3px 0;
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition: 0.5s;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+    margin-left: 20px;
+    padding-left: 5px;
+  }
+  
+  .add-remove {
+    font-size: 14px;
+  }
+  
+  .plus-minus {
+    margin: 0 5px;
+    font-size: 18px;
+  }
+  
+  span {
+    display: inline-block;
+    border: 1px solid #fff;
+    margin: 0 5px;
+  }
+  
+  .cell-small {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .cell-medium {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .cell-big {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .ion-paintbucket {
+    font-size: 30px;
+  }
+  
+  input[type="color"] {
+    margin-bottom: 8px;
+  }
+  
+  .clear-btn {
+    margin-top: 15px;
+  }
+  
+  .instruction {
+    padding: 15px 10px;
+  }
+  
+  /* Hover effects */
+  
+  .icon:hover,
+  span:hover,
+  button:hover,
+  input[type="color"] {
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Table section */
+  
+  .drawing-zone {
+    text-align: center;
+    width: 80%;
+  }
+  
+  table,
+  tr,
+  td {
+    border: 1px solid black;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 60px auto;
+  }
+  
+  tr {
+    height: 20px;
+  }
+  
+  td {
+    width: 20px;
+  }
+  
+  /***** CLASSES FOR INTERACTIVE ELEMENTS *****/
+  
+  .bg-white {
+    background-color: #fff;
+  }
+  
+  .border-off {
+    border: none;
+  }
+  
+  .side-off {
+    display: none;
+  }
+  
+  .width {
+    width: 100%;
+  }
+  
+  /***** MEDIA *****/
+  
+  @media only screen and (max-width: 767px) {
+    .flex {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    .side,
+    .drawing-zone {
+      width: 100%;
+    }
+  }

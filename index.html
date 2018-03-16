@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pixel Art Maker!</title>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CCabin+Sketch" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="clearfix">
+    <h1>Pixel Art Maker</h1>
+    <i class="ion-navicon-round menu-icon icon" id="nav_bar"></i>
+    <i class="ion-information-circled icon icon-info">
+      <span class="tooltiptext">
+        <i class="ion-android-done"></i> single click to change color of the cell<br>
+        <i class="ion-android-done"></i> double click to clear color of the cell<br>
+        <i class="ion-android-done"></i> click &amp; move mouse to draw<br>
+        <i class="ion-android-done"></i> shift &amp; move mouse to erase
+      </span>
+    </i>
+  </header>
+  <section class="flex">
+    <div class="side" id="hide_side">
+      <h2>Choose Grid Size</h2>
+      <form id="sizePicker" action="#">
+        <div class="line">
+          <label for="input_height">Grid Height:</label>
+          <input type="number" id="input_height" name="height" min="1" max="50" value="30">
+        </div>
+        <div class="line">
+          <label for="input_width">Grid Width:</label>
+          <input type="number" min="1" max="50" id="input_width" name="width" value="30">
+        </div>
+        <div class="line">
+          <button type="submit" id="button">Create Grid</button>
+        </div>
+      </form>
+      <div class="line add-remove">
+        <i class="ion-ios-minus-outline plus-minus icon" id="delete_row"></i> Row
+        <i class="ion-ios-plus-outline plus-minus icon" id="add_row"></i>
+      </div>
+      <div class="line add-remove">
+        <i class="ion-ios-minus-outline plus-minus icon" id="delete_column"></i> Column
+        <i class="ion-ios-plus-outline plus-minus icon" id="add_column"></i>
+      </div>
+      <h2>Change Cell Size</h2>
+      <div class="line">
+        <span class="cell-small" id="small"></span>
+        <span class="cell-medium" id="medium"></span>
+        <span class="cell-big" id="big"></span>
+      </div>
+      <h2>Pick A Color</h2>
+      <input type="color" id="colorPicker">
+      <div class="line">
+        <i class="ion-paintbucket icon" id="bucket"></i>
+      </div>
+      <button type="button" class="clear-btn" id="clear">Clear All</button>
+      <h2>View Your drawing</h2>
+      <button type="button" id="border">+/- Grid</button>
+      <button type="button" id="table_color">+/- White Bg Color</button>
+    </div>
+    <div class="drawing-zone" id="table_zone">
+      <table id="pixel_canvas"></table>
+    </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/designs.js"></script>
+</body>
+</html>

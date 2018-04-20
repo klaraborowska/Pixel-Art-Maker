@@ -1,7 +1,7 @@
 # Pixel Art Maker
 
 Final project for 1. part of Google FEND Scholarship at Udacity. 
-Live version: https://klaraborowska.github.io/pixel-art-maker/
+Live version: https://klaraborowska.github.io/Pixel-Art-Maker/
 
 ![Screenshot](https://github.com/klaraborowska/pixel-art-maker/blob/master/img/screenshot.png)
 
